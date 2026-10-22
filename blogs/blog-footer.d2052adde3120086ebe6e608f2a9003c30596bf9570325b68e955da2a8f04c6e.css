@@ -1,0 +1,83 @@
+@import url('./blog.2010bc1dfd0f7b2528490d35a142e9c10ee0abfef22bd0d111d1f5b03f38bf26.css');
+
+/* Footer layout and responsive spacing copied from the landing, isolated to blog pages. */
+.blog-page .site-footer {
+  background: #101b25;
+  color: white;
+  padding: 35px 0 18px;
+}
+
+.blog-page .site-footer .shell {
+  width: min(1160px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+.blog-page .footer-inner {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.blog-page .footer-brand small {
+  color: #d3dbe2;
+}
+
+.blog-page .footer-inner > div > span {
+  display: block;
+  color: #a9bac8;
+  font-size: .73rem;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+}
+
+.blog-page .footer-inner > div > a,
+.blog-page .footer-inner > div > p {
+  margin: 3px 0 0;
+}
+
+.blog-page .footer-bottom {
+  border-top: 1px solid #34424e;
+  margin-top: 28px;
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  color: #c4ccd3;
+  font-size: .78rem;
+}
+
+.blog-page .footer-bottom a {
+  color: white;
+}
+
+@media (max-width: 800px) {
+  .blog-page .site-footer .shell {
+    width: min(1160px, calc(100% - 48px));
+  }
+
+  .blog-page .footer-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .blog-page .footer-brand {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-page .site-footer .shell {
+    width: min(1160px, calc(100% - 48px));
+  }
+
+  .blog-page .footer-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-page .footer-brand {
+    grid-column: auto;
+  }
+
+  .blog-page .footer-bottom {
+    gap: 10px;
+  }
+}
