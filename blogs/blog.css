@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
 :root {
   color-scheme: light;
   --blog-blue: #0756a8;
@@ -8,8 +10,8 @@
   --blog-paper: #f4f6f7;
   --blog-line: #dce2e7;
   --blog-white: #fff;
-  --blog-sans: "DM Sans", Arial, sans-serif;
-  --blog-display: "Manrope", Arial, sans-serif;
+  --blog-sans: 'DM Sans', Arial, sans-serif;
+  --blog-display: 'Manrope', Arial, sans-serif;
 }
 
 * {
@@ -70,59 +72,109 @@ body.blog-page {
 }
 
 .blog-header-inner {
-  min-height: 78px;
+  position: relative;
+  min-height: 84px;
   gap: 24px;
 }
 
 .blog-brand {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   text-decoration: none;
 }
 
-.blog-brand-mark {
-  width: 42px;
-  height: 42px;
+.blog-brand-logo {
+  width: 66px;
+  height: 66px;
+  flex: 0 0 auto;
+  object-fit: cover;
+  background: var(--blog-white);
+}
+
+.blog-brand-copy {
   display: grid;
-  place-items: center;
-  border: 1px solid var(--blog-line);
-  border-radius: 50%;
-  color: var(--blog-blue-dark);
-  font: 800 .76rem/1 var(--blog-display);
-  letter-spacing: -.05em;
+  gap: 3px;
 }
 
 .blog-brand-name {
   color: var(--blog-ink);
-  font: 600 .92rem/1.25 var(--blog-display);
-  letter-spacing: -.025em;
+  font: 400 1.2rem/1.2 var(--blog-display);
+  letter-spacing: -.045em;
 }
 
-.blog-brand-name strong {
-  color: var(--blog-blue-dark);
-  font-weight: 800;
+.blog-brand-tagline {
+  color: var(--blog-muted);
+  font-size: .82rem;
+  line-height: 1.35;
 }
 
-.blog-home-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
+.blog-menu {
+  position: relative;
+  margin-left: auto;
+}
+
+.blog-menu-details {
+  position: relative;
+}
+
+.blog-menu-details summary {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 5px;
+  border: 1px solid var(--blog-line);
+  background: var(--blog-white);
+  cursor: pointer;
+  list-style: none;
+}
+
+.blog-menu-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.blog-menu-details summary:focus-visible {
+  outline: 3px solid var(--blog-orange);
+  outline-offset: 4px;
+}
+
+.blog-menu-details summary span {
+  width: 23px;
+  height: 2px;
+  background: var(--blog-ink);
+}
+
+.blog-menu-panel {
+  position: absolute;
+  z-index: 2;
+  top: calc(100% + 10px);
+  right: 0;
+  min-width: 190px;
+  padding: 7px;
+  border: 1px solid var(--blog-line);
+  background: var(--blog-white);
+  box-shadow: 0 8px 24px rgb(19 27 36 / 12%);
+}
+
+.blog-menu-panel a {
+  display: block;
+  padding: 10px 12px;
   color: var(--blog-blue-dark);
-  font-size: .88rem;
-  font-weight: 700;
+  font-size: .9rem;
+  font-weight: 500;
   text-decoration: none;
 }
 
-.blog-home-link span {
-  color: var(--blog-orange);
-  font-size: 1.1rem;
+.blog-menu-panel a:hover {
+  background: var(--blog-paper);
 }
 
 .blog-main {
   overflow: hidden;
-  padding: 72px 24px 96px;
-  background: linear-gradient(180deg, var(--blog-paper) 0, var(--blog-paper) 390px, var(--blog-white) 390px);
+  padding: 68px 24px 96px;
+  background: linear-gradient(180deg, var(--blog-paper) 0, var(--blog-paper) 560px, var(--blog-white) 560px);
 }
 
 .blog-article {
@@ -152,7 +204,7 @@ body.blog-page {
   margin: 0 0 18px;
   color: var(--blog-blue);
   font-size: .72rem;
-  font-weight: 800;
+  font-weight: 500;
   letter-spacing: .14em;
   line-height: 1.4;
   text-transform: uppercase;
@@ -168,15 +220,15 @@ body.blog-page {
 .blog-contact h2 {
   color: var(--blog-ink);
   font-family: var(--blog-display);
-  font-weight: 800;
-  letter-spacing: -.045em;
+  font-weight: 400;
+  letter-spacing: -.055em;
 }
 
 .blog-article h1 {
   max-width: 740px;
   margin: 0;
-  font-size: clamp(2.4rem, 6vw, 4.45rem);
-  line-height: 1.07;
+  font-size: clamp(2.35rem, 5.8vw, 4.1rem);
+  line-height: 1.1;
 }
 
 .blog-deck {
@@ -220,8 +272,8 @@ body.blog-page {
 .blog-prose h2 {
   margin: 2.25em 0 .55em;
   color: var(--blog-blue-dark);
-  font: 800 clamp(1.5rem, 3.5vw, 1.9rem)/1.25 var(--blog-display);
-  letter-spacing: -.035em;
+  font: 500 clamp(1.5rem, 3.5vw, 1.9rem)/1.3 var(--blog-display);
+  letter-spacing: -.04em;
 }
 
 .blog-prose ul {
@@ -257,13 +309,13 @@ body.blog-page {
   border: 1px solid #c8d8e6;
   border-radius: 50%;
   color: var(--blog-blue-dark);
-  font: 800 .92rem/1 var(--blog-display);
+  font: 600 .92rem/1 var(--blog-display);
 }
 
 .blog-safety-note h2 {
   margin: 1px 0 7px;
   color: var(--blog-blue-dark);
-  font: 800 1.06rem/1.35 var(--blog-display);
+  font: 600 1.06rem/1.35 var(--blog-display);
   letter-spacing: -.02em;
 }
 
@@ -295,6 +347,7 @@ body.blog-page {
 
 .blog-contact h2 {
   margin: 0;
+  font-weight: 500;
   font-size: clamp(1.35rem, 3vw, 1.8rem);
   line-height: 1.2;
 }
@@ -362,17 +415,34 @@ body.blog-page {
   }
 
   .blog-header-inner {
-    min-height: 68px;
+    min-height: 80px;
   }
 
-  .blog-brand-mark {
-    width: 38px;
-    height: 38px;
+  .blog-brand {
+    gap: 10px;
+  }
+
+  .blog-brand-logo {
+    width: 58px;
+    height: 58px;
+  }
+
+  .blog-brand-name {
+    font-size: 1.05rem;
+  }
+
+  .blog-brand-tagline {
+    font-size: .72rem;
+  }
+
+  .blog-menu-details summary {
+    width: 48px;
+    height: 48px;
   }
 
   .blog-main {
     padding: 50px 20px 66px;
-    background: linear-gradient(180deg, var(--blog-paper) 0, var(--blog-paper) 350px, var(--blog-white) 350px);
+    background: linear-gradient(180deg, var(--blog-paper) 0, var(--blog-paper) 575px, var(--blog-white) 575px);
   }
 
   .blog-article-heading {
@@ -390,8 +460,8 @@ body.blog-page {
   }
 
   .blog-article h1 {
-    font-size: clamp(2.15rem, 10vw, 3.2rem);
-    line-height: 1.08;
+    font-size: clamp(2.15rem, 9.2vw, 3.4rem);
+    line-height: 1.1;
   }
 
   .blog-deck {
@@ -446,17 +516,25 @@ body.blog-page {
     width: calc(100% - 28px);
   }
 
-  .blog-home-link {
-    gap: 5px;
-    font-size: .82rem;
+  .blog-brand {
+    gap: 8px;
+  }
+
+  .blog-brand-logo {
+    width: 52px;
+    height: 52px;
+  }
+
+  .blog-brand-name {
+    font-size: .96rem;
+  }
+
+  .blog-brand-tagline {
+    font-size: .66rem;
   }
 
   .blog-main {
     padding-inline: 16px;
-  }
-
-  .blog-brand-name {
-    font-size: .85rem;
   }
 }
 
