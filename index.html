@@ -1,6 +1,10 @@
 <!doctype html>
 <html lang="es-AR">
 <head>
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="base-uri 'self'; object-src 'none'; form-action 'none'">
+<script src="site-security.js"></script>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0756a8">
@@ -84,10 +88,26 @@
     @media(max-width:480px){.gallery-grid{grid-template-columns:1fr}.gallery-feature{grid-column:auto}.gallery-card img,.gallery-feature img{height:260px}}
   </style>
   <noscript><style>#contactForm{display:none}</style></noscript>
-  <script src="./script.js" defer></script>
+  <script data-site-script src="./script.js" defer></script>
 <script>
 !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}p||((p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",p.onerror=function(){p=null},(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r));var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],Object.defineProperty(u,"toString",{configurable:!0,enumerable:!0,writable:!0,value:function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e}}),Object.defineProperty(u.people,"toString",{configurable:!0,enumerable:!0,writable:!0,value:function(){return u.toString(1)+".people (stub)"}}),o="vu pu gu mu init Gu Qu Hu Wu Xu il Vu Yu ju oc ac lc uc cc hc capture getExtension Zu hu gc calculateEventProperties vc register register_once register_for_session unregister unregister_for_session zu mc getFeatureFlag getFeatureFlagPayload getFeatureFlagResult getAllFeatureFlags isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys onActiveMatchingSurveysChanged renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync wc identify setPersonProperties unsetPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset kc shutdown setIdentity clearIdentity get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException addExceptionStep captureLog startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty yc nc createPersonProfile setInternalOrTestUser bc xu ku opt_in_capturing opt_out_capturing Su has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing tc debug nl Os getPageViewId captureTraceFeedback captureTraceMetric Du".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
 posthog.init('phc_zRJZ5SvArTjrYcxxgLg35xTBeTofkA6DnmJoE6SXfPQV', {
+        before_send: (event) => {
+  if (!event || !event.properties) return event;
+  const privateKeys = /^(n|t|e|name|nombre|phone|telefono|tel|email|message|mensaje)$/i;
+  for (const key of ['$current_url', '$initial_current_url', '$referrer', '$initial_referrer']) {
+    const value = event.properties[key];
+    if (typeof value !== 'string') continue;
+    try {
+      const url = new URL(value);
+      for (const name of [...url.searchParams.keys()]) if (privateKeys.test(name)) url.searchParams.delete(name);
+      event.properties[key] = url.href;
+    } catch { /* Non-URL values such as $direct are preserved. */ }
+  }
+  for (const key of Object.keys(event.properties)) if (privateKeys.test(key)) delete event.properties[key];
+  return event;
+},
+        session_recording: { maskAllInputs: true },
     api_host: 'https://us.i.posthog.com',
     defaults: '2026-05-30',
     person_profiles: 'identified_only', // or 'always' to create profiles for anonymous users as well
@@ -126,7 +146,7 @@ posthog.init('phc_zRJZ5SvArTjrYcxxgLg35xTBeTofkA6DnmJoE6SXfPQV', {
 <article class="guide-feature"><a class="guide-feature-image" href="./blogs/senales-de-filtracion-en-el-techo/" tabindex="-1" aria-hidden="true"><img src="./images/blog/peeling.webp" width="931" height="678" alt="" loading="lazy" decoding="async"><span>GUÍA 01</span></a><div class="guide-feature-copy"><p class="guide-feature-meta">FILTRACIONES <span>7 min de lectura</span></p><h3><a href="./blogs/senales-de-filtracion-en-el-techo/">¿Manchas en el techo? 5 señales que conviene revisar.</a></h3><p>Manchas, pintura levantada o cambios después de la lluvia. Qué mirar desde el interior y qué información reunir antes de consultar.</p><a class="guide-feature-cta" href="./blogs/senales-de-filtracion-en-el-techo/">Leer la guía <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 19 19 5M5 5h14v14"/></svg></a></div></article>
 <div class="guide-preview-bottom"><p>PRÓXIMAS GUÍAS</p><ul><li><span>02 / HUMEDAD</span>Humedad en paredes: qué observar</li><li><span>03 / CONSULTAS</span>Qué información enviar al consultar</li></ul></div><p class="guide-preview-credit">Foto ilustrativa: <a href="https://commons.wikimedia.org/wiki/File:Ceiling_sheetrock_damaged_by_water_so_paint_was_peeling.jpg">Tomwsulcer / Wikimedia Commons</a> · CC0.</p>
 </div></section>
-    <section class="contact section" id="contacto"><div class="shell contact-grid"><div><p class="eyebrow">Hablemos</p><h2>Contanos qué necesitás resolver.</h2><p>Completá los datos y se abrirá WhatsApp con el mensaje preparado para que lo revises y envíes.</p><a class="contact-phone" href="tel:+5491128985042">+54 9 11 2898-5042</a><a class="direct-whatsapp" href="https://wa.me/5491128985042" target="_blank" rel="noopener noreferrer">Escribir por WhatsApp ↗</a><p class="address">Alborada 6665 · Virrey del Pino · Buenos Aires</p><noscript><p class="no-js-note">JavaScript está desactivado; usá los enlaces directos para llamar o abrir WhatsApp.</p></noscript></div><form id="contactForm"><label for="contactName">Tu nombre</label><input id="contactName" name="name" autocomplete="name" required><label for="contactPhone">Tu teléfono</label><input id="contactPhone" name="phone" type="tel" autocomplete="tel" required><label for="contactMessage">¿Qué trabajo necesitás? <small>(opcional)</small></label><textarea id="contactMessage" name="message" rows="4"></textarea><button class="button button-dark" type="submit">Preparar mensaje en WhatsApp ↗</button><p class="form-note" id="formStatus" aria-live="polite"></p></form></div></section>
+    <section class="contact section" id="contacto"><div class="shell contact-grid"><div><p class="eyebrow">Hablemos</p><h2>Contanos qué necesitás resolver.</h2><p>Completá los datos y se abrirá WhatsApp con el mensaje preparado para que lo revises y envíes.</p><a class="contact-phone" href="tel:+5491128985042">+54 9 11 2898-5042</a><a class="direct-whatsapp" href="https://wa.me/5491128985042" target="_blank" rel="noopener noreferrer">Escribir por WhatsApp ↗</a><p class="address">Alborada 6665 · Virrey del Pino · Buenos Aires</p><noscript><p class="no-js-note">JavaScript está desactivado; usá los enlaces directos para llamar o abrir WhatsApp.</p></noscript></div><form id="contactForm"><label for="contactName">Tu nombre</label><input id="contactName" name="name" autocomplete="name" required><label for="contactPhone">Tu teléfono</label><input id="contactPhone" name="phone" type="tel" autocomplete="tel" required><label for="contactMessage">¿Qué trabajo necesitás? <small>(opcional)</small></label><textarea id="contactMessage" name="message" rows="4"></textarea><button class="button button-dark" type="submit" disabled data-security-submit>Preparar mensaje en WhatsApp ↗</button><p class="form-note" id="formStatus" aria-live="polite"></p></form></div></section>
   </main>
   <footer class="site-footer"><div class="shell footer-inner"><a class="brand footer-brand" href="#inicio"><img src="./images/logo-techos-sanabria.webp" alt="" width="44" height="44" loading="lazy" decoding="async"><span><strong>Techos Sanabria</strong><small>Techos · Albañilería · Pintura</small></span></a><div><span>Contacto</span><a href="tel:+5491128985042">+54 9 11 2898-5042</a></div><div><span>Zona</span><p>Capital y provincia</p></div></div><div class="shell footer-bottom">© <span id="currentYear"></span> Techos Sanabria <a href="#inicio">Volver arriba ↑</a></div></footer>
 </body>
