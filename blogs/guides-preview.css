@@ -3,3 +3,7 @@
 @media(max-width:800px){.guide-preview-heading{grid-template-columns:1fr;gap:20px;margin-bottom:25px}.guide-preview-heading>p{max-width:520px;font-size:.95rem}.guide-feature{grid-template-columns:1fr}.guide-feature-image{min-height:260px}.guide-feature-copy{padding:26px}.guide-feature-meta{margin-bottom:16px}.guide-preview-bottom{grid-template-columns:1fr;gap:16px;margin-top:24px;padding-top:22px}.guide-preview-bottom ul{gap:20px}.guide-preview-bottom li{font-size:.8rem}}
 @media(prefers-reduced-motion:reduce){.guide-feature-image img{transition:none}.guide-feature:hover .guide-feature-image img{transform:none}}
 .guide-feature-cta svg{flex:none}
+
+/* Shared spacing for the home collection and the guide index. */
+.guide-collection{display:grid;gap:32px}.guide-preview-bottom a{color:var(--blue);font-weight:700;text-decoration:underline;text-underline-offset:4px}.guide-preview-credit summary{cursor:pointer}.guide-preview-credit p{max-width:75ch}
+.guide-preview-heading h1{font:800 clamp(2.3rem,4vw,3.5rem)/1.1 var(--display);letter-spacing:-.05em;margin:0}

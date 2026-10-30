@@ -34,3 +34,18 @@ Descargadas el 22 de octubre de 2026. Fotografías ilustrativas: no representan 
 - SHA-1 del original verificado: 7db686ff4a66f28d0990fc717e503654122e2ca0.
 - Portada y metadatos sociales de Humedad en paredes: qué observar. Encuadre de presentación adaptable mediante CSS.
 - Ilustra pintura desprendida en una pared; no acredita una causa ni representa un trabajo de Techos Sanabria.
+
+
+## deterioro-cielorraso.jpg
+
+- Descargada el 30 de octubre de 2026 con autorización específica del usuario.
+- Obra: Ceiling water damage.jpg
+- Autor: Atomicdragon136
+- Fuente: https://commons.wikimedia.org/wiki/File:Ceiling_water_damage.jpg
+- Archivo: https://upload.wikimedia.org/wikipedia/commons/b/b9/Ceiling_water_damage.jpg
+- Licencia: CC BY 3.0 — https://creativecommons.org/licenses/by/3.0/
+- JPEG original sin modificaciones ni recompresión, 3264 × 2448 px, 1134902 bytes. Se conserva JPEG por compatibilidad; sin instalar herramientas de conversión.
+- SHA-1 original verificado: 91433fa1f9c358ac1dfdf4add35467fe5a5ce391. Orientación EXIF original conservada.
+- Sustituye water.avif como segunda imagen de la guía 01. Ese archivo histórico no se elimina.
+- Fotografía ilustrativa de un panel de cielorraso con daño visible; la fuente atribuye el caso fotografiado a una cañería, no a una filtración de cubierta. No representa trabajo del negocio ni diagnostica el caso del lector.
+- Encuadre de presentación adaptable mediante CSS; crédito visible en el artículo.
