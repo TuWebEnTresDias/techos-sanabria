@@ -1,0 +1,33 @@
+{
+  "status": "draft",
+  "publication_authorized": false,
+  "prepared_at": "2026-10-30",
+  "articles": [
+    {
+      "number": "03",
+      "title": "Qué información enviar para consultar por una filtración",
+      "slug": "que-enviar-para-consultar-por-una-filtracion",
+      "words": 1359,
+      "minutes": 7,
+      "description": "Cómo armar un primer mensaje sobre una posible filtración: contexto, fotos útiles y antecedentes, con ejemplos para copiar y adaptar sin diagnosticar el problema.",
+      "status": "draft",
+      "url": "https://techos-sanabria.com/blogs/que-enviar-para-consultar-por-una-filtracion/"
+    },
+    {
+      "number": "04",
+      "title": "Qué puede incluir una revisión profesional del techo",
+      "slug": "revision-profesional-del-techo",
+      "words": 1474,
+      "minutes": 8,
+      "description": "Qué preguntar antes, durante y después de una revisión del techo: alcance, accesos, límites de la evaluación y diferencias entre revisar, presupuestar y reparar.",
+      "status": "draft",
+      "url": "https://techos-sanabria.com/blogs/revision-profesional-del-techo/"
+    }
+  ],
+  "notes": [
+    "No enlaces desde home/índice/sitemap hasta aprobación de cada artículo.",
+    "Noindex no es privacidad: no subir a main como forma de guardar un borrador privado.",
+    "Sin fotografías nuevas ni imágenes repetidas; apertura textual con componentes compartidos.",
+    "No fechas de publicación inventadas ni promesas de prestaciones."
+  ]
+}
