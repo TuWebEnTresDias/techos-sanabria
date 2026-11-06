@@ -1,6 +1,6 @@
 {
-  "status": "draft",
-  "publication_authorized": false,
+  "status": "partially_published",
+  "publication_authorized": true,
   "prepared_at": "2026-10-30",
   "articles": [
     {
@@ -10,7 +10,7 @@
       "words": 1359,
       "minutes": 7,
       "description": "Cómo armar un primer mensaje sobre una posible filtración: contexto, fotos útiles y antecedentes, con ejemplos para copiar y adaptar sin diagnosticar el problema.",
-      "status": "draft",
+      "status": "published",
       "url": "https://techos-sanabria.com/blogs/que-enviar-para-consultar-por-una-filtracion/"
     },
     {
@@ -25,9 +25,9 @@
     }
   ],
   "notes": [
-    "No enlaces desde home/índice/sitemap hasta aprobación de cada artículo.",
-    "Noindex no es privacidad: no subir a main como forma de guardar un borrador privado.",
-    "Sin fotografías nuevas ni imágenes repetidas; apertura textual con componentes compartidos.",
-    "No fechas de publicación inventadas ni promesas de prestaciones."
+    "La guía 03 publicada se incluye en el índice de /blogs/, en la sección de guías de la home y en sitemap.xml.",
+    "La guía 04 sigue siendo borrador noindex, no está enlazada y no figura en el sitemap.",
+    "Sin fechas de publicación inventadas ni promesas de prestaciones.",
+    "Sin fotografías nuevas ni imágenes repetidas."
   ]
 }
