@@ -1,5 +1,5 @@
 {
-  "status": "partially_published",
+  "status": "published",
   "publication_authorized": true,
   "prepared_at": "2026-10-30",
   "articles": [
@@ -20,13 +20,13 @@
       "words": 1474,
       "minutes": 8,
       "description": "Qué preguntar antes, durante y después de una revisión del techo: alcance, accesos, límites de la evaluación y diferencias entre revisar, presupuestar y reparar.",
-      "status": "draft",
+      "status": "published",
       "url": "https://techos-sanabria.com/blogs/revision-profesional-del-techo/"
     }
   ],
   "notes": [
     "La guía 03 publicada se incluye en el índice de /blogs/, en la sección de guías de la home y en sitemap.xml.",
-    "La guía 04 sigue siendo borrador noindex, no está enlazada y no figura en el sitemap.",
+    "La guía 04 se activó el 2026-11-13: se quitó noindex, se enlazó desde la home y `/blogs/`, y se agregó a sitemap.xml y llms.txt.",
     "Sin fechas de publicación inventadas ni promesas de prestaciones.",
     "Sin fotografías nuevas ni imágenes repetidas."
   ]

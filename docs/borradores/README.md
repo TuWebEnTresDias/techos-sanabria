@@ -1,11 +1,11 @@
 # Guías 03 y 04 — estado editorial
 
-Preparadas el 30/10/2026. La guía 03 está incluida en el paquete de publicación; la guía 04 permanece como borrador. El HTML es la fuente del texto y `guias-03-04.json` conserva las fichas editoriales.
+Preparadas el 30/10/2026. La guía 03 se publicó el 06/11/2026 y la guía 04 se activó el 13/11/2026. El HTML es la fuente del texto y `guias-03-04.json` conserva las fichas editoriales.
 
 | Guía | Tema | Archivo | Estado | Lectura estimada |
 |---|---|---|---|---|
 | 03 | Qué información enviar para consultar por una filtración | `../../blogs/que-enviar-para-consultar-por-una-filtracion/index.html` | Publicada | 7 min |
-| 04 | Qué puede incluir una revisión profesional del techo | `../../blogs/revision-profesional-del-techo/index.html` | Borrador | 8 min |
+| 04 | Qué puede incluir una revisión profesional del techo | `../../blogs/revision-profesional-del-techo/index.html` | Publicada | 8 min |
 
 ## Decisiones editoriales
 
@@ -22,6 +22,12 @@ Preparadas el 30/10/2026. La guía 03 está incluida en el paquete de publicaci�
 - Se añadió únicamente la URL de la guía 03 a `sitemap.xml`. La guía 04 permanece sin enlaces y sin URL en el sitemap.
 - No se agregó una fecha de publicación hasta verificar el despliegue efectivo.
 - La publicación no se programa automáticamente. La rama `main` requiere confirmación del manifiesto exacto antes del commit/push.
+
+## Publicación de la guía 04 — 13/11/2026
+
+- Se retiraron `noindex, nofollow` y la etiqueta visible de borrador; `creativeWorkStatus` pasa a `Published`.
+- Se activó la guía en la home y en `/blogs/`, y se añadió su URL canónica a `sitemap.xml` y `llms.txt`.
+- Supabase se actualiza después de verificar la versión servida.
 
 ## Revisión prevista
 
