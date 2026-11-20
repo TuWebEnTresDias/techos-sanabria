@@ -49,3 +49,7 @@ Descargadas el 22 de octubre de 2026. Fotografías ilustrativas: no representan 
 - Sustituye water.avif como segunda imagen de la guía 01. Ese archivo histórico no se elimina.
 - Fotografía ilustrativa de un panel de cielorraso con daño visible; la fuente atribuye el caso fotografiado a una cañería, no a una filtración de cubierta. No representa trabajo del negocio ni diagnostica el caso del lector.
 - Encuadre de presentación adaptable mediante CSS; crédito visible en el artículo.
+
+## Guía 05 · Impermeabilización
+
+- `impermeabilizacion-cubierta.webp` y `impermeabilizacion-desague.webp`: imágenes ilustrativas generadas para esta guía, convertidas a WebP. No representan trabajos de Techos Sanabria.
