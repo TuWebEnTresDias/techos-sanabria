@@ -19,7 +19,7 @@ Preparadas el 30/10/2026. La guía 03 se publicó el 06/11/2026 y la guía 04 se
 
 - Se retiraron `noindex, nofollow`, la etiqueta visible de borrador y el valor `creativeWorkStatus: Draft` únicamente de la guía 03.
 - Se agregó un enlace interno con título, resumen y tiempo de lectura a la sección de guías de la home y al índice `/blogs/`.
-- Se añadió únicamente la URL de la guía 03 a `sitemap.xml`. La guía 04 permanece sin enlaces y sin URL en el sitemap.
+- Se añadió únicamente la URL de la guía 03 a `sitemap.xml`. En esa etapa, la guía 04 todavía no estaba enlazada ni incluida en el sitemap.
 - No se agregó una fecha de publicación hasta verificar el despliegue efectivo.
 - La publicación no se programa automáticamente. La rama `main` requiere confirmación del manifiesto exacto antes del commit/push.
 
